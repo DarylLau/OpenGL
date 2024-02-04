@@ -1,0 +1,150 @@
+
+Environment
+===========
+Draw 4 walls, a floor, a ceiling
+
+
+Objects
+=======
+Draw 1 Table, 2 Chairs
+
+1 glutSolidTeapot
+1 glutSolidSphere
+1 glutSolidCone
+1 glutSolidTorus
+1 glutSolidDodecahedron
+1 glutSolidOctahedron
+1 glutSolidTetrahedron
+1 glutSolidIcosahedron
+
+2 Light Sources  (place at opposite ends of room)
+Spheres          (emission component)
+
+Swinging Spotlight
+- adjust the swinging speed
+
+
+Object Requirements
+===================
+Different colors, different material properties
+
+
+Keyboard Inputs
+===============
+
+o Wireframe and solid mode [scene.cpp]
+  glPolygonMode (...)
+  GL_FILL, GL_LINE, GL_FRONT_AND_BACK
+
+
+o Smooth and flat shading [lighting.cpp]
+  glShadeModel (...)    
+  GL_SMOOTH, GL_FLAT
+
+
+o Enable and disable colour tracking [lighting.cpp]
+  glEnable (GL_COLOUR_MATERIAL)
+  // reset material properties
+  e.g. 
+  glMaterialfv ( .. )
+
+
+- Turn the help display on/off    <=  V.V. Impt!!
+- Turn individual lights on/off
+- To quit the program
+
+
+Lighting Requirements   
+=====================
+Adjust global ambient light       [lighting.cpp]
+3 settings (weak, medium, bright)
+
+
+
+
+Camera Requirements
+===================
+- Zoom In / Out (move forward/backwards)
+- "Roll" +/- 45 degrees
+- Move camera position (left, right, up, down)
+- Move camera rotation (pitch, yaw, roll)
+
+
+V.V. Impt => [Reset Camera Position]
+ - press 'r' key resets camera to default position and aiming at center of room
+
+
+Help display:
+- how to use your program
+- frames per second
+
+
+
+
+=====================================================
+
+Advanced Task
+
+‘disco’ lights  (give me 3 will do 'R', 'G', 'B')
+
+- switch each light on/off
+- adjust their moving speed
+
+Combine 2 different views into one program
+
+- Use 2 'sub-windows'
+- E.g. 
+  left sub-window is "orthographic"
+  right sub-window is "perspective"
+- Label your sub-windows!
+
+
+
+
+==============================================
+Research Tasks
+==============================================
+
+LightPosition.exe     gluLookAt (...)  glLightfv (...)
+LightMaterial.exe     glLightfv (...)  glMaterialfv (...)
+
+Projection.exe    gluPerspective (...)  gluLookAt (...)
+
+Transformation.exe  glTranslatef (...) glRotatef (...)    glScale (...)
+
+==============================================
+
+scene.cpp
+ortho.cpp
+perspective.cpp
+subwindow.cpp
+2DProjection.cpp
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
